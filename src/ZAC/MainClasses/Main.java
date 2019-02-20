@@ -10,9 +10,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("ZAC.ZAC-RAT");
-        primaryStage.setScene(new Scene(root, 600, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Menu.fxml"));
+        primaryStage.setTitle("ZAC-RAT");
+        primaryStage.setScene(new Scene(root, 300, 350));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

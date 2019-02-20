@@ -1,5 +1,4 @@
 package ZAC.Controllers;
 
-public class Controller {
-
+public class Menu {
 }
