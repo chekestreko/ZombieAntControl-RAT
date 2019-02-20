@@ -1,5 +1,6 @@
 package ZAC.MainClasses;
 
+import ZAC.Stages.Menu;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,16 +10,19 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Menu.fxml"));
-        primaryStage.setTitle("ZAC-RAT");
-        primaryStage.setScene(new Scene(root, 300, 350));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+    public void start(Stage initializerStage) throws Exception{
+
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Main.fxml"));
+        initializerStage.setTitle("ZAC-initializer");
+        initializerStage.setScene(new Scene(root, 200, 200));
+        initializerStage.setResizable(false);
+
+        //create main stage
+        Menu menu = new Menu();
+        menu.start(new Stage());
     }
 
-
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         launch(args);
     }
 }
