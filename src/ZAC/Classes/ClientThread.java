@@ -1,6 +1,6 @@
 package ZAC.Classes;
 
-public class ClientThread {
+public class ClientThread extends Thread{
 
 
 }
