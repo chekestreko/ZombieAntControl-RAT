@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox maxWidth="400.0" minWidth="200.0" prefHeight="335.0" prefWidth="367.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ZAC.Controllers.ServerControl_Terminal">
+   <children>
+      <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" text="Teminal" VBox.vgrow="ALWAYS" />
+      <ScrollPane fx:id="terminal_SPane" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <content>
+            <TextFlow fx:id="log_TFlow" />
+         </content>
+      </ScrollPane>
+      <TextField fx:id="command_TF" maxWidth="1.7976931348623157E308" onKeyPressed="#pressed" promptText="Command....." VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

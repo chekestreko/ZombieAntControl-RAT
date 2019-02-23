@@ -15,12 +15,11 @@ public class ServerControl extends Application {
     public void start(Stage stage) throws Exception{
 
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/ServerControl.fxml"));
-        stage.setTitle("ZAC@Server-Setup");
+        stage.setTitle("ZAC@Server");
         stage.setScene(new Scene(root, 970, 540));
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
 
         this.stage = stage;
     }
-
 }

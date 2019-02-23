@@ -17,7 +17,7 @@ public class ServerSetup extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/ServerSetup.fxml"));
         stage.setTitle("ZAC@Server-Setup");
-        stage.setScene(new Scene(root, 300, 200));
+        stage.setScene(new Scene(root, 150, 200));
         stage.setResizable(false);
         stage.show();
 

@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="540.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ZAC.Stages.ServerControl">
-
+   <children>
+      <VBox layoutX="442.0" layoutY="138.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="30.0" prefWidth="970.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="73.0" text="Welcome To ZAC RAT" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="0.0" text="Target[NULL]" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="0.0" text="-*-*-*-" HBox.hgrow="ALWAYS" />
+               </children></HBox>
+            <SplitPane dividerPositions="0.15392561983471073, 0.6859504132231405" VBox.vgrow="ALWAYS">
+              <items>
+                  <SplitPane dividerPositions="0.3420074349442379" maxWidth="225.0" orientation="VERTICAL">
+                    <items>
+                        <fx:include source="ServerControl_InfoTarget.fxml" />
+                        <fx:include source="ServerControl_Target.fxml" />
+                    </items>
+                  </SplitPane>
+                  <fx:include source="ServerControl_Command.fxml" />
+                  <fx:include source="ServerControl_Terminal.fxml" />
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
