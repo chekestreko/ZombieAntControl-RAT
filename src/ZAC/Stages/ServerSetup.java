@@ -27,7 +27,7 @@ public class ServerSetup extends Application {
     @FXML private void selected_Run()throws Exception{
 
         stage.close();
-        ServerControl serverControl = new ServerControl();
+        ServerControl serverControl = new ServerControl(9191);//TODO make get port from field
         serverControl.start(stage);
     }
 
