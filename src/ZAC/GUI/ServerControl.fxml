@@ -14,7 +14,8 @@
                <children>
                   <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="73.0" text="Welcome To ZAC RAT" HBox.hgrow="ALWAYS" />
                   <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="0.0" text="Target[NULL]" HBox.hgrow="ALWAYS" />
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="0.0" text="-*-*-*-" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="0.0" text="Port[NULL]" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="110.0" text="-*-*-*-" HBox.hgrow="ALWAYS" />
                </children></HBox>
             <SplitPane dividerPositions="0.15392561983471073, 0.6859504132231405" VBox.vgrow="ALWAYS">
               <items>

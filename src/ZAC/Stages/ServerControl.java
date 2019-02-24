@@ -10,9 +10,8 @@ import javafx.stage.Stage;
 public class ServerControl extends Application {
 
     private int port;
-    //private static Stage stage;
 
-    public ServerControl(int port){
+    public void setPort(int port){
 
         this.port = port;
     }
@@ -28,9 +27,5 @@ public class ServerControl extends Application {
         stage.setScene(new Scene(root, 970, 540));
         stage.setResizable(true);
         stage.show();
-
-        //this.stage = stage;
-
-
     }
 }
