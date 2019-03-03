@@ -19,7 +19,7 @@
                </children></HBox>
             <SplitPane dividerPositions="0.15392561983471073, 0.6859504132231405" VBox.vgrow="ALWAYS">
               <items>
-                  <SplitPane dividerPositions="0.3420074349442379" maxWidth="225.0" orientation="VERTICAL">
+                  <SplitPane dividerPositions="0.3420074349442379" maxWidth="1.7976931348623157E308" orientation="VERTICAL">
                     <items>
                         <fx:include source="ServerControl_InfoTarget.fxml" />
                         <fx:include source="ServerControl_Target.fxml" />

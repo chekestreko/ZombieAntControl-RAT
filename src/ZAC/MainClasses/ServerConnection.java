@@ -1,6 +1,7 @@
 package ZAC.MainClasses;
 
 import ZAC.Classes.ClientThread;
+import ZAC.Stages.ServerControl;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -10,13 +11,15 @@ import java.util.List;
 
 public class ServerConnection extends Thread{
 
-    private List<ClientThread> ClientList = new ArrayList<>();
+    public List<ClientThread> ClientList = new ArrayList<>();
 
     private int port;
+    private ServerControl controller;
 
-    public ServerConnection(int port){
+    public ServerConnection(int port, ServerControl controller){
 
         this.port = port;
+        this.controller = controller;
     }
 
     @Override
@@ -28,18 +31,16 @@ public class ServerConnection extends Thread{
 
             ServerSocket serverSocket = new ServerSocket(port);
 
+            addLog("Server Online!");
+
             while(true) {
+
                 Socket client = serverSocket.accept();
                 String ip = client.getRemoteSocketAddress().toString().replace("/", "").split(":")[0];
-                checkDuplicated(ip);
-                ClientList.add(new ClientThread(client, ip));
 
-                System.out.println(ip);
+                new ClientThread(client, ip, this).start();
             }
         } catch (IOException e) {
-
-            e.printStackTrace();
-        } catch (InterruptedException e) {
 
             e.printStackTrace();
         }
@@ -50,6 +51,7 @@ public class ServerConnection extends Thread{
         for (ClientThread thread : ClientList) {
             if(thread.getName().equals(ip)){
 
+                System.out.println(ip+" + "+thread.getName());
                 thread.stopConnection();
 
                 while(!thread.isStoped){
@@ -60,5 +62,10 @@ public class ServerConnection extends Thread{
                 System.out.println("something was stoped!");
             }
         }
+    }
+
+    public void addLog(String text){
+
+        ServerControl.mController.serverControl_terminal.addLog("@Server/", "#006600", text, "#999966");
     }
 }

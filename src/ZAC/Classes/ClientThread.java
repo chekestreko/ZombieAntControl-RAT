@@ -1,5 +1,7 @@
 package ZAC.Classes;
 
+import ZAC.MainClasses.ServerConnection;
+
 import java.io.*;
 import java.net.Socket;
 
@@ -12,17 +14,27 @@ public class ClientThread extends Thread{
     private boolean stopThread;
     public  boolean isStoped;
 
-    public ClientThread(Socket socket, String name){
+    ServerConnection server;
+
+    public ClientThread(Socket socket, String name, ServerConnection server){
 
         this.socket = socket;
-        this.setName(name);
-        this.start();
+        this.server = server;
+        setName(name);
     }
 
     @Override
     public void run(){
 
         super.run();
+
+        try {
+            server.checkDuplicated(this.getName());
+            server.ClientList.add(this);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("Client up bro");
         stopThread = false;
         isStoped = false;
@@ -34,7 +46,7 @@ public class ClientThread extends Thread{
 
             while(!stopThread){
 
-                sleep(0);//stops thread from not stopping
+                sleep(0);//help thread from not stopping
             }
         } catch (IOException e) {
 
