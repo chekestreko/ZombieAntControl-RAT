@@ -1,5 +1,6 @@
 package ZAC.Stages;
 
+import ZAC.Classes.ClientThread;
 import ZAC.MainClasses.MainController;
 import ZAC.MainClasses.ServerConnection;
 import javafx.application.Application;
@@ -29,8 +30,15 @@ public class ServerControl extends Application {
         stage.setScene(new Scene(root, 970, 540));
         stage.setResizable(true);
 
+        mController.initializa();
+
         stage.show();
 
-        new ServerConnection(port, this).start();
+        new ServerConnection(port).start();
+    }
+
+    public void addConnection(ClientThread connection){
+
+
     }
 }

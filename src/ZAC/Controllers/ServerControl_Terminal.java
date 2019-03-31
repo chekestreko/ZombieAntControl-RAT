@@ -20,7 +20,6 @@ public class ServerControl_Terminal {
     public ServerControl_Terminal(){
 
         ServerControl.mController.setServerControl_terminal(this);
-        System.out.println("Running ");
     }
 
     @FXML public void pressed(KeyEvent e) {
@@ -33,7 +32,6 @@ public class ServerControl_Terminal {
 
                     command_TF.setText("");
             }
-
         }
 
     }

@@ -8,7 +8,7 @@
 <VBox maxHeight="180.0" minHeight="50.0" minWidth="90.0" prefHeight="180.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="25.0" text="Info" VBox.vgrow="ALWAYS" />
-      <Button layoutX="-20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Set Target" VBox.vgrow="ALWAYS">
+      <Button fx:id="setTarget_Button" layoutX="-20.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Set Target" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets bottom="10.0" />
          </VBox.margin>
